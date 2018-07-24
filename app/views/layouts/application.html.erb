@@ -10,9 +10,21 @@
   </head>
 
   <body>
-    <%= link_to "Home", root_path %>
-    <%= link_to "New Post", new_post_path %>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Way Cool Rails Blog <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+        </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "New Post", new_post_path %></li>
+        </ul>
+      </div>
+    </nav>
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

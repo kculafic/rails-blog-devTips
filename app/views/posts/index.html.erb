@@ -1,12 +1,21 @@
-<h1>Posts#index</h1>
+<h1>Blog posts</h1>
 
 <% @posts.each do |post| %>
-  <h2>
-    <%= post.title %>
-  </h2>
-  <div>
-    <%= truncate(post.body, :length => 35) %>
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+
+      <div class="post-preview">
+          <h2 class="post-title">
+            <%= post.title %>
+          </h2>
+          <h5 class="post-subtitle">
+            <%= truncate(post.body, :length => 800) %>
+          </h5>
+
+        <button>
+          <%= link_to "Read Post", post %>
+        </button>
+      </div>
+    </div>
   </div>
-  <br />
-  <%= link_to "Read Post", post %>
 <% end %>

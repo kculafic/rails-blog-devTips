@@ -1,12 +1,10 @@
-<h1>
-  <!-- <%= @post.id %>  -->
-  <%= @post.title %>
-</h1>
+<h1><%= @post.title %></h1>
+<div><%= @post.body %></div>
 
-<div>
-  <%= @post.body %>
-</div>
+<button>
+  <%= link_to "Edit Post", edit_post_path(@post) %>
+</button>
 
-<%= link_to "Edit Post", edit_post_path(@post) %>
-
-<%= link_to "Delete Post", post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
+<button>
+  <%= link_to "Delete Post", post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
+</button>
