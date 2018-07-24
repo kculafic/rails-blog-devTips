@@ -1,9 +1,9 @@
 <h1>Blog posts</h1>
 
-<% @posts.each do |post| %>
-  <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
+<div class="row">
+  <div class="col-lg-11 col-md-10 mx-auto">
 
+    <% @posts.each do |post| %>
       <div class="post-preview">
           <h2 class="post-title">
             <%= post.title %>
@@ -16,6 +16,7 @@
           <%= link_to "Read Post", post %>
         </button>
       </div>
-    </div>
+    <% end %>
+
   </div>
-<% end %>
+</div>
